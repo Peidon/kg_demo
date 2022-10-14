@@ -1,8 +1,8 @@
 # coding: utf-8
-from classifier import Classifier
-from neo_models import Neo4j
-from read_csv import readCSVbyColumn
-from hudong_class import HudongItem
+from .classifier import Classifier
+from .neo_models import Neo4j
+from .read_csv import readCSVbyColumn
+from .hudong_class import HudongItem
 
 def create_predict(HudongItem_csv):
 	# 读取neo4j内容 

@@ -1,8 +1,8 @@
 # coding: utf-8
 
 from py2neo import Graph,Node,Relationship
-from read_csv import readCSV2
-from hudong_class import HudongItem
+from .read_csv import readCSV2
+from .hudong_class import HudongItem
 
 class Neo4j():
 	graph = None
@@ -29,7 +29,7 @@ class Neo4j():
 		for line in labels:
 			ctx = self.graph.find_one(label="HudongItem",property_key="title",property_value=line[0])
 			if ctx == None:
-				continue;
+				continue
 			cur = HudongItem(ctx)
 			cur.label = line[1]
 			List.append(cur)
