@@ -1,7 +1,3 @@
-import sys
-import os
-
-import pymongo
 from pymongo import MongoClient
 
 class Mongo():
